@@ -2,7 +2,7 @@ package backup;
 
 public class App {
 
-    static Configurator configurator = new FileConfigurator();
+    private static Configurator configurator = new FileConfigurator();
 
     public static void main(String[] args) {
         try {
