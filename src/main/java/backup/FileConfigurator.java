@@ -3,6 +3,7 @@ package backup;
 
 import org.json.JSONObject;
 
+import javax.naming.ConfigurationException;
 import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -39,7 +40,7 @@ public class FileConfigurator implements Configurator {
                 System.out.printf("Can't find file %s\n", confFile);
             }
         }
-        throw new Exception("Can't find any configuration file");
+        throw new ConfigurationException("Can't find any configuration file");
     }
 
     public List<String> getBackupTargets() {
